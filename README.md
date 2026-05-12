@@ -33,10 +33,3 @@ PDF → Text Extraction → Chunking → Embeddings → FAISS Vector DB → Retr
 - Groq API (LLaMA 3.1)
 - PyPDF
 
----
-
-## 📦 Installation
-
-```bash
-git clone https://github.com/your-username/rag-chatbot.git
-cd rag-chatbot
