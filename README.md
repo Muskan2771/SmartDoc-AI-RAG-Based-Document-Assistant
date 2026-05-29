@@ -1,5 +1,7 @@
 # 🤖 AI Customer Support Chatbot using RAG
 
+🔗 **Live Demo:** https://smartdoc-ai-rag-based-document-assistant-cq5stdgxfixhtk8dbkmzp.streamlit.app/
+
 An intelligent Retrieval-Augmented Generation (RAG) chatbot that allows users to upload PDF documents and ask questions using natural language.
 
 The system uses semantic search and Large Language Models (LLMs) to generate context-aware answers from uploaded documents.
