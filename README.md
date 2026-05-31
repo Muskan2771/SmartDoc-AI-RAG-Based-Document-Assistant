@@ -273,6 +273,6 @@ Passionate about building intelligent AI systems using Large Language Models (LL
 
 ### Connect With Me
 
-* GitHub: https://github.com/yourusername
-* LinkedIn: https://linkedin.com/in/yourprofile
-* Email: [your-email@example.com](mailto:your-email@example.com)
+* GitHub: https://github.com/Muskan2771/
+* LinkedIn: https://www.linkedin.com/in/musu-shaikh/
+* Email: [shaikhmuskan2771@gmail.com](mailto:shaikhmuskan2771@gmail.com)
