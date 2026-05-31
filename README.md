@@ -1,103 +1,108 @@
-# 🤖 AI Customer Support Chatbot using RAG
+# 🤖 SmartDoc AI – RAG-Based Document Assistant
 
 🔗 **Live Demo:** https://smartdoc-ai-rag-based-document-assistant-cq5stdgxfixhtk8dbkmzp.streamlit.app/
 
-An intelligent Retrieval-Augmented Generation (RAG) chatbot that allows users to upload PDF documents and ask questions using natural language.
+## 📌 Overview
 
-The system uses semantic search and Large Language Models (LLMs) to generate context-aware answers from uploaded documents.
+SmartDoc AI is an intelligent Retrieval-Augmented Generation (RAG) application that enables users to upload PDF documents and interact with them using natural language queries.
 
-Built using LangChain, FAISS, Groq LLM, and Streamlit.
+The system combines semantic document retrieval with Large Language Models (LLMs) to generate accurate, context-aware answers directly from uploaded documents. Instead of relying solely on model knowledge, responses are grounded in the document content, reducing hallucinations and improving reliability.
 
----
-
-# 🚀 Features
-
-* 📄 Upload and process PDF documents
-* 🧠 Semantic search using FAISS vector database
-* 🤖 AI-powered responses using Groq LLaMA 3.1
-* 💬 ChatGPT-style conversational interface
-* 📚 Context-aware question answering
-* ⚡ Fast inference with Groq API
-* 🔍 Retrieval-Augmented Generation (RAG) pipeline
-* 🗂️ Multi-turn conversation memory
+This project demonstrates practical implementation of Generative AI, Natural Language Processing (NLP), Vector Databases, and Large Language Models in a real-world customer support and document intelligence use case.
 
 ---
 
-# 🧠 Architecture Diagram
+## ✨ Key Features
 
-![Architecture](assets/architecture.png)
+* 📄 Upload and analyze PDF documents
+* 🔍 Semantic search using vector embeddings
+* 🧠 Retrieval-Augmented Generation (RAG) pipeline
+* 🤖 Context-aware AI responses powered by Groq LLaMA 3.1
+* 💬 Interactive ChatGPT-style conversational interface
+* ⚡ Fast inference using Groq API
+* 📚 Multi-turn conversation support
+* 🗂 Intelligent document chunking and retrieval
+* 🔒 Environment variable-based API key management
+* 🌐 Streamlit-based web application
 
 ---
 
-# 📸 Demo
+## 🏗️ System Architecture
 
-## 🏠 Home Screen
+```text
+User Uploads PDF
+        │
+        ▼
+ PDF Text Extraction
+        │
+        ▼
+ Document Chunking
+        │
+        ▼
+ Embedding Generation
+        │
+        ▼
+ FAISS Vector Store
+        │
+        ▼
+ Semantic Retriever
+        │
+        ▼
+ Relevant Context
+        │
+        ▼
+ Groq LLaMA 3.1
+        │
+        ▼
+ AI Generated Answer
+```
+
+---
+
+## 📸 Application Screenshots
+
+### Home Page
 
 ![Home](assets/home.png)
 
----
-
-## 📄 PDF Upload
+### Document Upload
 
 ![Upload](assets/upload.png)
 
----
-
-## 💬 Chat Interface
+### AI Chat Interface
 
 ![Chat](assets/chat.png)
 
 ---
 
-# ⚙️ How It Works
+## 🛠️ Technology Stack
 
-```text
-PDF Upload
-    ↓
-Text Extraction
-    ↓
-Text Chunking
-    ↓
-Embeddings Generation
-    ↓
-FAISS Vector Database
-    ↓
-Retriever
-    ↓
-Groq LLM
-    ↓
-AI Response
-```
+| Category               | Technologies           |
+| ---------------------- | ---------------------- |
+| Programming Language   | Python                 |
+| Frontend               | Streamlit              |
+| LLM Framework          | LangChain              |
+| Vector Database        | FAISS                  |
+| Embedding Model        | HuggingFace Embeddings |
+| LLM Provider           | Groq                   |
+| Model                  | LLaMA 3.1              |
+| Document Processing    | PyPDFLoader            |
+| Environment Management | python-dotenv          |
 
 ---
 
-# 🛠️ Tech Stack
-
-| Technology             | Purpose                   |
-| ---------------------- | ------------------------- |
-| Python                 | Core Programming Language |
-| Streamlit              | Frontend UI               |
-| LangChain              | RAG Framework             |
-| FAISS                  | Vector Database           |
-| HuggingFace Embeddings | Text Embeddings           |
-| Groq API               | LLM Inference             |
-| PyPDF                  | PDF Processing            |
-
----
-
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```bash
-AI Customer Support Chatbot/
+SmartDoc-AI/
 │
 ├── app/
-│   ├── __init__.py
 │   ├── llm_handler.py
-│   ├── main.py
 │   ├── pdf_processor.py
 │   ├── rag_pipeline.py
+│   ├── vector_store.py
 │   ├── ui.py
-│   └── vector_store.py
+│   └── main.py
 │
 ├── assets/
 │   ├── architecture.png
@@ -106,62 +111,66 @@ AI Customer Support Chatbot/
 │   └── chat.png
 │
 ├── data/
-│
+├── requirements.txt
 ├── .env
 ├── .gitignore
-├── requirements.txt
 └── README.md
 ```
 
 ---
 
-# ⚙️ Installation
+## ⚙️ Installation & Setup
 
-## 1️⃣ Clone Repository
-
-```bash
-git clone https://github.com/yourusername/rag_chatbot.git
-```
-
----
-
-## 2️⃣ Navigate to Project
+### 1. Clone Repository
 
 ```bash
-cd rag_chatbot
+git clone https://github.com/yourusername/SmartDoc-AI.git
+cd SmartDoc-AI
 ```
 
----
+### 2. Create Virtual Environment
 
-## 3️⃣ Install Dependencies
+```bash
+python -m venv venv
+```
+
+### 3. Activate Environment
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Linux / Mac:
+
+```bash
+source venv/bin/activate
+```
+
+### 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
+### 5. Configure Environment Variables
 
-## 4️⃣ Create `.env` File
-
-Add your Groq API key:
+Create a `.env` file:
 
 ```env
-GROQ_API_KEY=your_api_key_here
+GROQ_API_KEY=your_groq_api_key
 ```
 
----
-
-## 5️⃣ Run Application
+### 6. Run Application
 
 ```bash
-cd app
-
-streamlit run main.py
+streamlit run app/main.py
 ```
 
 ---
 
-# 🔑 Environment Variables
+## 🔑 Environment Variables
 
 | Variable     | Description  |
 | ------------ | ------------ |
@@ -169,35 +178,101 @@ streamlit run main.py
 
 ---
 
-# 📚 Key Learnings
+## 🧠 RAG Pipeline Workflow
 
-* Implemented Retrieval-Augmented Generation (RAG)
-* Built semantic search pipeline using FAISS
-* Integrated Groq LLaMA 3.1 for fast inference
-* Learned vector embeddings and document retrieval
-* Developed modular AI application architecture
+### Step 1: Document Ingestion
+
+* Upload PDF documents.
+* Extract text using PyPDFLoader.
+
+### Step 2: Text Chunking
+
+* Split large documents into manageable chunks.
+* Preserve contextual continuity using overlap.
+
+### Step 3: Embedding Generation
+
+* Convert text chunks into vector representations.
+* Generate semantic embeddings using HuggingFace models.
+
+### Step 4: Vector Storage
+
+* Store embeddings in FAISS Vector Database.
+* Enable efficient similarity search.
+
+### Step 5: Retrieval
+
+* Retrieve most relevant document chunks based on user query.
+
+### Step 6: Response Generation
+
+* Pass retrieved context to Groq LLaMA 3.1.
+* Generate accurate, context-grounded responses.
 
 ---
 
-# 🚀 Future Improvements
+## 🎯 Skills Demonstrated
 
-* Multi-document support
+### Generative AI
+
+* Retrieval-Augmented Generation (RAG)
+* Prompt Engineering
+* Context Injection
+* LLM Integration
+
+### Natural Language Processing
+
+* Semantic Search
+* Text Embeddings
+* Document Understanding
+* Conversational AI
+
+### Software Engineering
+
+* Modular Architecture
+* API Integration
+* Environment Configuration
+* Error Handling
+
+### AI Infrastructure
+
+* Vector Databases
+* Similarity Search
+* Document Retrieval Systems
+* LLM Pipelines
+
+---
+
+## 📈 Future Enhancements
+
+* Multi-document querying
 * OCR support for scanned PDFs
-* Authentication system
-* Chat history database
-* Cloud deployment
-* Docker support
+* User authentication
+* Conversation history database
+* Docker containerization
+* Cloud deployment (AWS/GCP/Azure)
+* Advanced citation generation
+* Source highlighting
+* Multi-language support
 
 ---
 
-# 📄 License
+## 📄 License
 
-This project is licensed under the MIT License.
+Licensed under the MIT License.
 
 ---
 
-# 👩‍💻 Author
+## 👩‍💻 Author
 
-Muskan Shaikh
+**Muskan Shaikh**
 
-Aspiring Data Scientist & AI/ML Engineer passionate about building intelligent AI applications using Machine Learning, NLP, and Generative AI.
+Aspiring AI/ML Engineer | Data Scientist | Generative AI Enthusiast
+
+Passionate about building intelligent AI systems using Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Natural Language Processing (NLP), Machine Learning, and Cloud Technologies.
+
+### Connect With Me
+
+* GitHub: https://github.com/yourusername
+* LinkedIn: https://linkedin.com/in/yourprofile
+* Email: [your-email@example.com](mailto:your-email@example.com)
