@@ -2,7 +2,7 @@ import streamlit as st
 
 from ui import setup_ui
 from pdf_processor import load_and_split_pdf
-from app.vector_store import create_vectorstore
+from vector_store import create_vectorstore
 from rag_pipeline import generate_answer
 
 #ui setup
