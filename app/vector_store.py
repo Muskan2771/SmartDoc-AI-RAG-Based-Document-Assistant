@@ -19,14 +19,5 @@ def create_vectorstore(documents):
     #This converts the vector database into a retriever object.
     #What is a Retriever?
 
-"""
-A retriever is responsible for:
-
-User Question
-↓
-Find Relevant Chunks
-↓
-Return Documents""
-
     retriever=vectorstore.as_retriever()
     return retriever
